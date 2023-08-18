@@ -1,5 +1,4 @@
-import { Box, Button, Flex, Heading, Text } from "@chakra-ui/react";
-import React from "react";
+import { Button, Flex, Heading } from "@chakra-ui/react";
 import HERO_IMAGE from "../assets/Hero.jpg";
 import COLOR from "../constants/COLOR";
 const HomeScreen = () => {

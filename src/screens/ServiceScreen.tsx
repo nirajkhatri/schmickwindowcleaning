@@ -1,5 +1,4 @@
-import { Box, Card, CardBody, Flex, Heading, Text } from "@chakra-ui/react";
-import React from "react";
+import { Card, CardBody, Flex, Heading, Text } from "@chakra-ui/react";
 
 const ServiceScreen = () => {
   return (

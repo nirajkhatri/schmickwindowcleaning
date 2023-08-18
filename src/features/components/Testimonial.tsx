@@ -1,5 +1,4 @@
 import { Card, CardBody, Flex, Heading, Text } from "@chakra-ui/react";
-import React from "react";
 
 const Testimonial = () => {
   return (

@@ -1,5 +1,4 @@
 import { Flex, Heading } from "@chakra-ui/react";
-import React from "react";
 import COLOR from "../../constants/COLOR";
 
 const Footer = () => {

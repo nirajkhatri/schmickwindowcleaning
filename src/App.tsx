@@ -1,11 +1,7 @@
-import { Box, Grid, GridItem } from "@chakra-ui/react";
+import { Grid, GridItem } from "@chakra-ui/react";
 import TopBar from "./features/components/TopBar";
 import HomeScreen from "./screens/HomeScreen";
-import AboutScreen from "./screens/AboutScreen";
-import ContactScreen from "./screens/ContactScreen";
 import Footer from "./features/components/Footer";
-import ServiceScreen from "./screens/ServiceScreen";
-import Testimonial from "./features/components/Testimonial";
 
 const App = () => {
   return (

@@ -1,5 +1,4 @@
 import { Box, Flex, Heading, Image, Text, VStack } from "@chakra-ui/react";
-import React from "react";
 import HERO_IMAGE from "../assets/Hero.jpg";
 
 const AboutScreen = () => {
