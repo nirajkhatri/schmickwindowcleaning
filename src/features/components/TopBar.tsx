@@ -1,4 +1,4 @@
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Link, Text } from "@chakra-ui/react";
 import COLOR from "../../constants/COLOR";
 
 const TopBar = () => {
@@ -16,12 +16,12 @@ const TopBar = () => {
           SWC
         </Text>
       </Box>
-      {/* <Box display={"flex"} flex={1} justifyContent={"flex-end"} gap={40}>
+      <Box display={"flex"} flex={1} justifyContent={"flex-end"} gap={8}>
         <Button as={Link}>Home</Button>
-        <Button as={Link}>Service</Button>
         <Button as={Link}>About</Button>
+        <Button as={Link}>Service</Button>
         <Button as={Link}>Contact</Button>
-      </Box> */}
+      </Box>
     </Flex>
   );
 };

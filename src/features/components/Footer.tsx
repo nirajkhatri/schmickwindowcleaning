@@ -9,7 +9,7 @@ const Footer = () => {
       justifyContent={"center"}
       alignItems={"center"}
     >
-      <Heading as={"h3"}>
+      <Heading size={"md"}>
         &copy; {new Date().getFullYear()} , Schmick Window Cleaning
       </Heading>
     </Flex>

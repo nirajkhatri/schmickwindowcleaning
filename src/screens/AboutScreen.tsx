@@ -1,43 +1,73 @@
-import { Box, Flex, Heading, Image, Text, VStack } from "@chakra-ui/react";
-import HERO_IMAGE from "../assets/Hero.jpg";
+import {
+  Box,
+  Divider,
+  Flex,
+  Heading,
+  Image,
+  Text,
+  VStack,
+  useBreakpointValue,
+} from "@chakra-ui/react";
+import ABOUT_IMAGE from "../assets/About.jpg";
+import COLOR from "../constants/COLOR";
 
 const AboutScreen = () => {
+  const flexDirection1 = useBreakpointValue({ base: "column", md: "row" });
+
   return (
     <Flex
       flexDirection={"column"}
       height={"100%"}
-      px={40}
-      py={20}
+      px={"20px"}
+      py={"20px"}
       alignItems={"center"}
+      bg={COLOR.LIGHT_CREAM}
     >
-      <Heading fontWeight={"bold"}>GET TO KNOW US</Heading>
-      <Heading mt={10} fontWeight={"bold"}>
-        ABOUT SHINY WINDOWS
+      <Heading size={"md"} mt={8} mb={8} fontWeight={"bold"}>
+        ABOUT US
       </Heading>
+      <Divider
+        alignSelf={"center"}
+        height={1}
+        w={"100%"}
+        backgroundColor={COLOR.BLUE}
+      />
 
-      <Flex mt={30} justifyContent={"center"} gap={100}>
-        <Box flex={1}>
-          <Image src={HERO_IMAGE} height={500} w={500} />
+      <Flex
+        flexDirection={flexDirection1}
+        mt={"40px"}
+        justifyContent={"center"}
+        justifyItems={"center"}
+        gap={20}
+      >
+        <Box display={"flex"} flex={1} justifyContent={"center"}>
+          <Image src={ABOUT_IMAGE} height={450} w={450} />
         </Box>
-        <VStack flex={1} w={"50%"}>
-          <Text>
-            We are a professional and friendly team offering quality services in
-            Sydney. We pride ourselves in providing clean windows with excellent
-            customer service consistently
-          </Text>
-          <VStack>
+        <Box
+          display={"flex"}
+          flex={1}
+          justifyContent={"center"}
+          alignItems={"center"}
+        >
+          <VStack w={"60%"}>
             <Text>
               We are a professional and friendly team offering quality services
               in Sydney. We pride ourselves in providing clean windows with
-              excellent customer service consistently
+              excellent customer service consistently We are a professional and
+              friendly team offering quality services in Sydney. We pride
+              ourselves in providing clean windows with excellent customer
+              service consistently
             </Text>
             <Text>
               We are a professional and friendly team offering quality services
               in Sydney. We pride ourselves in providing clean windows with
-              excellent customer service consistently
+              excellent customer service consistently We are a professional and
+              friendly team offering quality services in Sydney. We pride
+              ourselves in providing clean windows with excellent customer
+              service consistently
             </Text>
           </VStack>
-        </VStack>
+        </Box>
       </Flex>
     </Flex>
   );
