@@ -11,5 +11,4 @@ jobs:
       #     node-version: "14"
       - run: node -v
       - run: yarn install
-      - run: bats -v
       - run: yarn build
