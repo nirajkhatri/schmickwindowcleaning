@@ -1,7 +1,19 @@
-import { Box, Button, Flex, Link, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Flex,
+  IconButton,
+  Link,
+  Text,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 import COLOR from "../../constants/COLOR";
+import { AiOutlineMenu } from "react-icons/ai";
 
 const TopBar = () => {
+  const displayer = useBreakpointValue({ base: "flex", md: "none" });
+  const displayer1 = useBreakpointValue({ base: "none", md: "flex" });
+
   return (
     <Flex
       px={"40px"}
@@ -16,12 +28,15 @@ const TopBar = () => {
           SWC
         </Text>
       </Box>
-      <Box display={"flex"} flex={1} justifyContent={"flex-end"} gap={8}>
+      <Box display={displayer1} flex={1} justifyContent={"flex-end"} gap={8}>
         <Button as={Link}>Home</Button>
         <Button as={Link}>About</Button>
         <Button as={Link}>Service</Button>
         <Button as={Link}>Contact</Button>
       </Box>
+      <IconButton display={displayer} aria-label="menu-button">
+        <AiOutlineMenu />
+      </IconButton>
     </Flex>
   );
 };

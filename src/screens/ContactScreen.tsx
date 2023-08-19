@@ -17,14 +17,16 @@ const ContactScreen = () => {
   const widthDir = useBreakpointValue({ base: "100%", md: "50%" });
   const marginDir = useBreakpointValue({ base: "20px", md: "0" });
 
-  const btnDir = useBreakpointValue({ base: "center", md: "flex-start" });
+  const btnDir = useBreakpointValue({ base: "flex-start", md: "flex-start" });
+
+  const isMobile = useBreakpointValue({ base: true, md: false });
 
   return (
     <Flex
       bg={COLOR.LIGHT_CREAM}
       flexDirection={"column"}
-      px={"20px"}
-      py={"20px"}
+      px={"40px"}
+      py={"40px"}
       height={"100%"}
     >
       <Box>
@@ -34,27 +36,55 @@ const ContactScreen = () => {
         <Divider height={1} w={"100%"} backgroundColor={COLOR.BLUE} />
       </Box>
 
-      <Flex flexDirection={flexDirection1 as any} flex={1} mt={10}>
-        <Flex flex={1} alignItems={"center"} flexDir={"column"} gap={10}>
-          <Flex mt={"20px"} flexDir={"column"}>
-            <Heading size="md" mb={1}>
-              Our Address
-            </Heading>
-            <Divider height={"0.5"} w={"100%"} backgroundColor={COLOR.BLUE} />
-            <Text mt={1} mb={1} fontSize={"20px"}>
+      <Flex
+        flexDirection={flexDirection1 as any}
+        flex={1}
+        mt={isMobile ? 10 : 20}
+      >
+        <Flex
+          flex={1}
+          alignItems={"center"}
+          justifyContent={"center"}
+          flexDir={"column"}
+          gap={10}
+        >
+          <Flex
+            width={"100%"}
+            flexDir={"column"}
+            alignItems={isMobile ? "flex-start" : "center"}
+          >
+            <Heading size={"md"}>Our Address</Heading>
+            <Divider
+              my={2}
+              height={"0.5"}
+              w={"40%"}
+              backgroundColor={COLOR.BLUE}
+            />
+            <Text mb={1} fontSize={isMobile ? "md" : "20px"}>
               Address 45, Bathurst street{" "}
             </Text>
-            <Text fontSize={"20px"}>Liverpool, Australia</Text>
-          </Flex>
-          <Flex flexDir={"column"}>
-            <Heading size={"md"} mt={1} mb={1}>
-              Contact Info.
-            </Heading>
-            <Divider height={"0.5"} w={"100%"} backgroundColor={COLOR.BLUE} />
-            <Text mt={1} mb={1} fontSize={"20px"}>
-              Email : random@gmail.com
+            <Text fontSize={isMobile ? "md" : "20px"}>
+              Liverpool, Australia
             </Text>
-            <Text fontSize={"20px"}>Phone No. : 98xxxxxx</Text>
+          </Flex>
+          <Flex
+            w="100%"
+            flexDir={"column"}
+            alignItems={isMobile ? "flex-start" : "center"}
+          >
+            <Heading size={"md"}>Contact Info.</Heading>
+            <Divider
+              my={2}
+              height={"0.5"}
+              w={"40%"}
+              backgroundColor={COLOR.BLUE}
+            />
+            <Text mb={1} fontSize={isMobile ? "md" : "20px"}>
+              Email : nirajkhatri.official@gmail.com
+            </Text>
+            <Text fontSize={isMobile ? "md" : "20px"}>
+              Phone No. : 048-127-2316
+            </Text>
           </Flex>
         </Flex>
         <Flex flex={1} flexDirection={"column"}>

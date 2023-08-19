@@ -16,6 +16,7 @@ import { BsBook } from "react-icons/bs";
 const ServiceScreen = () => {
   const flexDirection1 = useBreakpointValue({ base: "column", md: "row" });
   const width1 = useBreakpointValue({ base: "100%", md: "60%" });
+  const isMobile = useBreakpointValue({ base: true, md: false });
 
   return (
     <Flex
@@ -37,7 +38,7 @@ const ServiceScreen = () => {
           backgroundColor={COLOR.BLUE}
         />
 
-        <Heading fontWeight={"bold"}>
+        <Heading size={isMobile ? "md" : "lg"} fontWeight={"bold"}>
           We’re Dedicated Cleaners, Passionate About Achieving A Great Result
         </Heading>
         <Text>

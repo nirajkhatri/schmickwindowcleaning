@@ -13,13 +13,13 @@ import COLOR from "../constants/COLOR";
 
 const AboutScreen = () => {
   const flexDirection1 = useBreakpointValue({ base: "column", md: "row" });
-
+  const isMobile = useBreakpointValue({ base: true, md: false });
   return (
     <Flex
       flexDirection={"column"}
       height={"100%"}
-      px={"20px"}
-      py={"20px"}
+      px={"40px"}
+      py={"40px"}
       alignItems={"center"}
       bg={COLOR.LIGHT_CREAM}
     >
@@ -35,21 +35,17 @@ const AboutScreen = () => {
 
       <Flex
         flexDirection={flexDirection1 as any}
-        mt={"40px"}
+        mt={20}
+        mb={20}
         justifyContent={"center"}
         justifyItems={"center"}
         gap={20}
       >
-        <Box display={"flex"} flex={1} justifyContent={"center"}>
-          <Image src={ABOUT_IMAGE} height={450} w={450} />
+        <Box display={"flex"} justifyContent={"flex-end"} flex={1}>
+          <Image src={ABOUT_IMAGE} height={isMobile ? 300 : 450} w={450} />
         </Box>
-        <Box
-          display={"flex"}
-          flex={1}
-          justifyContent={"center"}
-          alignItems={"center"}
-        >
-          <VStack w={"60%"}>
+        <Box display={"flex"} flex={1}>
+          <VStack w={isMobile ? "100%" : "80%"}>
             <Text>
               We are a professional and friendly team offering quality services
               in Sydney. We pride ourselves in providing clean windows with

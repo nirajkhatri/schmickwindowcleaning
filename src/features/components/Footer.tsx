@@ -1,7 +1,8 @@
-import { Flex, Heading } from "@chakra-ui/react";
+import { Flex, Heading, useBreakpointValue } from "@chakra-ui/react";
 import COLOR from "../../constants/COLOR";
 
 const Footer = () => {
+  const isMobile = useBreakpointValue({ base: true, md: false });
   return (
     <Flex
       bg={COLOR.LIGHT_CREAM}
@@ -9,7 +10,7 @@ const Footer = () => {
       justifyContent={"center"}
       alignItems={"center"}
     >
-      <Heading size={"md"}>
+      <Heading textAlign={"center"} size={isMobile ? "sm" : "md"}>
         &copy; {new Date().getFullYear()} , Schmick Window Cleaning
       </Heading>
     </Flex>

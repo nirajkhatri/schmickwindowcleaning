@@ -13,30 +13,36 @@ const HomeScreen = () => {
       flex={1}
       height={"100%"}
       justifyContent={"center"}
+      padding={"40px"}
     >
       <Flex
         flexDir="column"
         justifyContent={"center"}
         alignItems={"center"}
         gap={35}
-        padding={20}
         color={COLOR.BLUE}
         textAlign={"center"}
         w={"100%"}
       >
-        <Heading size={"md"} fontWeight={"bold"}>
+        <Heading
+          width={"100%"}
+          size={{ base: "sm", md: "md" }}
+          fontWeight={"bold"}
+        >
           BEST GLASS AND COMMERCIAL CLEANING SERVICE
         </Heading>
         <Heading
           letterSpacing={"wider"}
-          size={"md"}
+          size={{ base: "sm", md: "md" }}
           width={{ base: "100%", md: "60%" }}
         >
           We offer the leading commercial cleaning services in Sydney: real
           people, delivering real results.
         </Heading>
-        <Heading size={"md"}>CALL US TODAY - 0431 381 925</Heading>
-        <Heading size={"md"}></Heading>
+        <Heading size={{ base: "sm", md: "md" }}>
+          CALL US TODAY - 048 127 2316
+        </Heading>
+        <Heading size={{ base: "sm", md: "md" }}></Heading>
         <Button
           style={{
             padding: "10px",
