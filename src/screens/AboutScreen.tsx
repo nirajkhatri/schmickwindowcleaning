@@ -34,7 +34,7 @@ const AboutScreen = () => {
       />
 
       <Flex
-        flexDirection={flexDirection1}
+        flexDirection={flexDirection1 as any}
         mt={"40px"}
         justifyContent={"center"}
         justifyItems={"center"}

@@ -34,7 +34,7 @@ const ContactScreen = () => {
         <Divider height={1} w={"100%"} backgroundColor={COLOR.BLUE} />
       </Box>
 
-      <Flex flexDirection={flexDirection1} flex={1} mt={10}>
+      <Flex flexDirection={flexDirection1 as any} flex={1} mt={10}>
         <Flex flex={1} alignItems={"center"} flexDir={"column"} gap={10}>
           <Flex mt={"20px"} flexDir={"column"}>
             <Heading size="md" mb={1}>

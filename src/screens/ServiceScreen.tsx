@@ -61,7 +61,7 @@ const ServiceScreen = () => {
         mb={"100px"}
         justifyContent={"space-evenly"}
         gap={10}
-        flexDirection={flexDirection1}
+        flexDirection={flexDirection1 as any}
       >
         <Card
           borderRadius={10}
