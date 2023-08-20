@@ -80,7 +80,7 @@ const ContactScreen = () => {
               backgroundColor={COLOR.BLUE}
             />
             <Text mb={1} fontSize={isMobile ? "md" : "20px"}>
-              Email : nirajkhatri.official@gmail.com
+              Email : deepsonbhusal@gmail.com
             </Text>
             <Text fontSize={isMobile ? "md" : "20px"}>
               Phone No. : 048-127-2316

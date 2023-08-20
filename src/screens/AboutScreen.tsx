@@ -54,14 +54,6 @@ const AboutScreen = () => {
               ourselves in providing clean windows with excellent customer
               service consistently
             </Text>
-            <Text>
-              We are a professional and friendly team offering quality services
-              in Sydney. We pride ourselves in providing clean windows with
-              excellent customer service consistently We are a professional and
-              friendly team offering quality services in Sydney. We pride
-              ourselves in providing clean windows with excellent customer
-              service consistently
-            </Text>
           </VStack>
         </Box>
       </Flex>

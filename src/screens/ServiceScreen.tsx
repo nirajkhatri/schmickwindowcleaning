@@ -151,6 +151,103 @@ const ServiceScreen = () => {
           </CardBody>
         </Card>
       </Flex>
+      <Flex
+        flex={1}
+        w={"100%"}
+        mb={"100px"}
+        justifyContent={"space-evenly"}
+        gap={10}
+        flexDirection={flexDirection1 as any}
+      >
+        <Card
+          borderRadius={10}
+          style={{
+            padding: "20px",
+          }}
+          display={"flex"}
+          textAlign={"center"}
+        >
+          <Box
+            style={{
+              padding: "10px",
+              borderRadius: 20,
+              alignSelf: "center",
+              display: "flex",
+              justifyContent: "center",
+              backgroundColor: COLOR.DARK_CREAM,
+            }}
+          >
+            <BsBook size={24} color={COLOR.BLUE} />
+          </Box>
+          <CardHeader>
+            <Heading size={"sm"}>Lease Cleaning</Heading>
+          </CardHeader>
+          <CardBody>
+            <Text>We're specialists in cleaning lease</Text>
+          </CardBody>
+        </Card>
+        <Card
+          borderRadius={10}
+          style={{
+            padding: "20px",
+          }}
+          display={"flex"}
+          textAlign={"center"}
+        >
+          <Box
+            style={{
+              padding: "10px",
+              borderRadius: 20,
+              alignSelf: "center",
+              display: "flex",
+              justifyContent: "center",
+              backgroundColor: COLOR.DARK_CREAM,
+            }}
+          >
+            <BsBook size={24} color={COLOR.BLUE} />
+          </Box>
+          <CardHeader>
+            <Heading size={"sm"}>House Cleaning</Heading>
+          </CardHeader>
+          <CardBody>
+            <Text>
+              We take care of cleanliness and hygiene, so you doesn't have worry
+              about cleaning!
+            </Text>
+          </CardBody>
+        </Card>
+        <Card
+          borderRadius={10}
+          style={{
+            padding: "20px",
+          }}
+          display={"flex"}
+          textAlign={"center"}
+          flex={1}
+        >
+          <Box
+            style={{
+              padding: "10px",
+              borderRadius: 20,
+              alignSelf: "center",
+              display: "flex",
+              justifyContent: "center",
+              backgroundColor: COLOR.DARK_CREAM,
+            }}
+          >
+            <BsBook size={24} color={COLOR.BLUE} />
+          </Box>
+          <CardHeader>
+            <Heading size={"sm"}>Pressure Cleaning</Heading>
+          </CardHeader>
+          <CardBody>
+            <Text>
+              We take care of cleanliness and hygiene, so you doesn't have worry
+              about cleaning!
+            </Text>
+          </CardBody>
+        </Card>
+      </Flex>
     </Flex>
   );
 };
