@@ -144,10 +144,10 @@ const ServiceScreen = () => {
             <BsBook size={24} color={COLOR.BLUE} />
           </Box>
           <CardHeader>
-            <Heading size={"sm"}>Deep Cleaning</Heading>
+            <Heading size={"sm"}>Commercial Cleaning</Heading>
           </CardHeader>
           <CardBody>
-            <Text>We offer clients deep and facility maintenance programs</Text>
+            <Text>We offer commercial cleaning programs</Text>
           </CardBody>
         </Card>
       </Flex>
@@ -207,7 +207,7 @@ const ServiceScreen = () => {
             <BsBook size={24} color={COLOR.BLUE} />
           </Box>
           <CardHeader>
-            <Heading size={"sm"}>House Cleaning</Heading>
+            <Heading size={"sm"}>Residental Cleaning</Heading>
           </CardHeader>
           <CardBody>
             <Text>

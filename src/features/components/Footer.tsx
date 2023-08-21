@@ -11,7 +11,7 @@ const Footer = () => {
       alignItems={"center"}
     >
       <Heading textAlign={"center"} size={isMobile ? "sm" : "md"}>
-        &copy; {new Date().getFullYear()} , Schmick Window Cleaning
+        &copy; 2019 - {new Date().getFullYear()} , Schmick Window Cleaning
       </Heading>
     </Flex>
   );

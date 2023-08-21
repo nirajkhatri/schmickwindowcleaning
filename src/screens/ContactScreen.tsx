@@ -63,9 +63,8 @@ const ContactScreen = () => {
             <Text mb={1} fontSize={isMobile ? "md" : "20px"}>
               Address 45, Bathurst street{" "}
             </Text>
-            <Text fontSize={isMobile ? "md" : "20px"}>
-              Liverpool, Australia
-            </Text>
+            <Text fontSize={isMobile ? "md" : "20px"}>Liverpool, NSW 2170</Text>
+            <Text fontSize={isMobile ? "md" : "20px"}>Australia</Text>
           </Flex>
           <Flex
             w="100%"

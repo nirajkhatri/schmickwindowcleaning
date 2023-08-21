@@ -47,12 +47,15 @@ const AboutScreen = () => {
         <Box display={"flex"} flex={1}>
           <VStack w={isMobile ? "100%" : "80%"}>
             <Text>
-              We are a professional and friendly team offering quality services
-              in Sydney. We pride ourselves in providing clean windows with
-              excellent customer service consistently We are a professional and
-              friendly team offering quality services in Sydney. We pride
-              ourselves in providing clean windows with excellent customer
-              service consistently
+              With over 5 years in the glass and commercial cleaning industry,
+              Schmick Glass And Window Cleaning provide a professional service
+              for all Residential homes, commercial Showrooms and Industrial
+              Properties.We are a professional and friendly team offering
+              quality services in Sydney. We pride ourselves in providing clean
+              windows with excellent customer service consistently. We are a
+              professional and friendly team offering quality services in
+              Sydney. We pride ourselves in providing clean windows with
+              excellent customer service consistently
             </Text>
           </VStack>
         </Box>
