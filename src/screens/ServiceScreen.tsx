@@ -1,17 +1,57 @@
 import {
-  Box,
   Card,
   CardBody,
   CardHeader,
   Divider,
   Flex,
   Heading,
+  Image,
   Text,
   VStack,
   useBreakpointValue,
 } from "@chakra-ui/react";
 import COLOR from "../constants/COLOR";
-import { BsBook } from "react-icons/bs";
+
+import CITY from "../assets/CITY.jpg";
+import RESIDENT from "../assets/RESIDENT.jpg";
+import STORE_FRONT from "../assets/STORE_FRONT.jpg";
+import COMMERCIAL from "../assets/COMMERCIAL.jpg";
+
+const SERVICES_LIST = [
+  {
+    id: 0,
+    name: "RESIDENTIAL",
+    image: RESIDENT,
+    description:
+      "Windows are the primary source for natural light in your home! Have them washed and cleaned both internally and externally to bring out the beauty of your house.",
+  },
+  {
+    id: 1,
+    name: "COMMERCIAL",
+    image: COMMERCIAL,
+    description:
+      "Regular Commercial Window Cleaning is the best way to create positive customer perception. We use the water Fed Pole system to reach high windows without risk of damage.",
+  },
+  {
+    id: 2,
+    name: "STORE FRONTS",
+    image: STORE_FRONT,
+    description:
+      "Store front window cleaning is done on a weekly or fortnightly basis. Professionally cleaned windows speak volumes about the kind of business that you represent. if your glass is dirty, it will be the first thing customers notice.",
+  },
+  {
+    id: 3,
+    name: "PRESSURE CLEANING",
+    image: CITY,
+    description:
+      "We take care of cleanliness and hygiene, so you doesn't have worry about cleaning!",
+  },
+];
+
+const cardsPerLine = 3; // Number of cards in one line
+const gap = 10; // Gap between cards
+const totalGap = (cardsPerLine - 1) * gap;
+const cardWidth = `calc((100% - ${totalGap}px) / ${cardsPerLine})`;
 
 const ServiceScreen = () => {
   const flexDirection1 = useBreakpointValue({ base: "column", md: "row" });
@@ -20,6 +60,7 @@ const ServiceScreen = () => {
 
   return (
     <Flex
+      id="services"
       flexDirection={"column"}
       height={"100%"}
       px={"40px"}
@@ -56,197 +97,34 @@ const ServiceScreen = () => {
         </Text>
       </VStack>
       <Flex
-        flex={1}
-        w={"100%"}
-        mt={"100px"}
-        mb={"100px"}
-        justifyContent={"space-evenly"}
-        gap={10}
         flexDirection={flexDirection1 as any}
-      >
-        <Card
-          borderRadius={10}
-          style={{
-            padding: "20px",
-          }}
-          display={"flex"}
-          textAlign={"center"}
-        >
-          <Box
-            style={{
-              padding: "10px",
-              borderRadius: 20,
-              alignSelf: "center",
-              display: "flex",
-              justifyContent: "center",
-              backgroundColor: COLOR.DARK_CREAM,
-            }}
-          >
-            <BsBook size={24} color={COLOR.BLUE} />
-          </Box>
-          <CardHeader>
-            <Heading size={"sm"}>School Cleaning</Heading>
-          </CardHeader>
-          <CardBody>
-            <Text>
-              We're specialists in cleaning primary schools and high school
-            </Text>
-          </CardBody>
-        </Card>
-        <Card
-          borderRadius={10}
-          style={{
-            padding: "20px",
-          }}
-          display={"flex"}
-          textAlign={"center"}
-        >
-          <Box
-            style={{
-              padding: "10px",
-              borderRadius: 20,
-              alignSelf: "center",
-              display: "flex",
-              justifyContent: "center",
-              backgroundColor: COLOR.DARK_CREAM,
-            }}
-          >
-            <BsBook size={24} color={COLOR.BLUE} />
-          </Box>
-          <CardHeader>
-            <Heading size={"sm"}>Office Cleaning</Heading>
-          </CardHeader>
-          <CardBody>
-            <Text>
-              We take care of cleanliness and hygiene, so your team doesn't have
-              to!
-            </Text>
-          </CardBody>
-        </Card>
-        <Card
-          borderRadius={10}
-          style={{
-            padding: "20px",
-          }}
-          display={"flex"}
-          textAlign={"center"}
-        >
-          <Box
-            style={{
-              backgroundColor: COLOR.DARK_CREAM,
-              padding: "10px",
-              borderRadius: 20,
-              alignSelf: "center",
-              display: "flex",
-              justifyContent: "center",
-            }}
-          >
-            <BsBook size={24} color={COLOR.BLUE} />
-          </Box>
-          <CardHeader>
-            <Heading size={"sm"}>Commercial Cleaning</Heading>
-          </CardHeader>
-          <CardBody>
-            <Text>We offer commercial cleaning programs</Text>
-          </CardBody>
-        </Card>
-      </Flex>
-      <Flex
-        flex={1}
+        my={isMobile ? "50px" : "100px"}
+        flexWrap={"wrap"}
+        gap={"10px"}
         w={"100%"}
-        mb={"100px"}
-        justifyContent={"space-evenly"}
-        gap={10}
-        flexDirection={flexDirection1 as any}
       >
-        <Card
-          borderRadius={10}
-          style={{
-            padding: "20px",
-          }}
-          display={"flex"}
-          textAlign={"center"}
-        >
-          <Box
-            style={{
-              padding: "10px",
-              borderRadius: 20,
-              alignSelf: "center",
-              display: "flex",
-              justifyContent: "center",
-              backgroundColor: COLOR.DARK_CREAM,
-            }}
-          >
-            <BsBook size={24} color={COLOR.BLUE} />
-          </Box>
-          <CardHeader>
-            <Heading size={"sm"}>Lease Cleaning</Heading>
-          </CardHeader>
-          <CardBody>
-            <Text>We're specialists in cleaning lease</Text>
-          </CardBody>
-        </Card>
-        <Card
-          borderRadius={10}
-          style={{
-            padding: "20px",
-          }}
-          display={"flex"}
-          textAlign={"center"}
-        >
-          <Box
-            style={{
-              padding: "10px",
-              borderRadius: 20,
-              alignSelf: "center",
-              display: "flex",
-              justifyContent: "center",
-              backgroundColor: COLOR.DARK_CREAM,
-            }}
-          >
-            <BsBook size={24} color={COLOR.BLUE} />
-          </Box>
-          <CardHeader>
-            <Heading size={"sm"}>Residental Cleaning</Heading>
-          </CardHeader>
-          <CardBody>
-            <Text>
-              We take care of cleanliness and hygiene, so you doesn't have worry
-              about cleaning!
-            </Text>
-          </CardBody>
-        </Card>
-        <Card
-          borderRadius={10}
-          style={{
-            padding: "20px",
-          }}
-          display={"flex"}
-          textAlign={"center"}
-          flex={1}
-        >
-          <Box
-            style={{
-              padding: "10px",
-              borderRadius: 20,
-              alignSelf: "center",
-              display: "flex",
-              justifyContent: "center",
-              backgroundColor: COLOR.DARK_CREAM,
-            }}
-          >
-            <BsBook size={24} color={COLOR.BLUE} />
-          </Box>
-          <CardHeader>
-            <Heading size={"sm"}>Pressure Cleaning</Heading>
-          </CardHeader>
-          <CardBody>
-            <Text>
-              We take care of cleanliness and hygiene, so you doesn't have worry
-              about cleaning!
-            </Text>
-          </CardBody>
-        </Card>
+        {SERVICES_LIST.map((service) => {
+          return (
+            <Card
+              key={service.id}
+              borderRadius={10}
+              style={{
+                padding: "20px",
+              }}
+              display={"flex"}
+              textAlign={"center"}
+              width={isMobile ? "100%" : cardWidth}
+            >
+              <CardBody>
+                <Image src={service.image} height={"200px"} width={"100%"} />
+                <CardHeader>
+                  <Heading size={"sm"}>{service.name}</Heading>
+                </CardHeader>
+                <Text>{service.description}</Text>
+              </CardBody>
+            </Card>
+          );
+        })}
       </Flex>
     </Flex>
   );

@@ -16,6 +16,7 @@ const AboutScreen = () => {
   const isMobile = useBreakpointValue({ base: true, md: false });
   return (
     <Flex
+      id="about"
       flexDirection={"column"}
       height={"100%"}
       px={"40px"}
@@ -52,10 +53,7 @@ const AboutScreen = () => {
               for all Residential homes, commercial Showrooms and Industrial
               Properties.We are a professional and friendly team offering
               quality services in Sydney. We pride ourselves in providing clean
-              windows with excellent customer service consistently. We are a
-              professional and friendly team offering quality services in
-              Sydney. We pride ourselves in providing clean windows with
-              excellent customer service consistently
+              windows with excellent customer service consistently.
             </Text>
           </VStack>
         </Box>

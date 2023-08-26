@@ -23,6 +23,7 @@ const ContactScreen = () => {
 
   return (
     <Flex
+      id="contact"
       bg={COLOR.LIGHT_CREAM}
       flexDirection={"column"}
       px={"40px"}

@@ -1,6 +1,8 @@
 import { Button, Flex, Heading } from "@chakra-ui/react";
 import HERO_IMAGE from "../assets/Hero.jpg";
 import COLOR from "../constants/COLOR";
+import { Link } from "react-scroll";
+
 const HomeScreen = () => {
   return (
     <Flex
@@ -29,7 +31,7 @@ const HomeScreen = () => {
           size={{ base: "sm", md: "md" }}
           fontWeight={"bold"}
         >
-          BEST GLASS AND COMMERCIAL CLEANING SERVICE
+          BEST WINDOW AND COMMERCIAL CLEANING SERVICE
         </Heading>
         <Heading
           letterSpacing={"wider"}
@@ -43,19 +45,21 @@ const HomeScreen = () => {
           CALL US TODAY - 048 127 2316
         </Heading>
         <Heading size={{ base: "sm", md: "md" }}></Heading>
-        <Button
-          style={{
-            padding: "10px",
-            border: "none",
-            cursor: "pointer",
-            backgroundColor: COLOR.DARK_CREAM,
-            color: "white",
-            fontWeight: "bold",
-            fontSize: "16px",
-          }}
-        >
-          Our Services
-        </Button>
+        <Link to="services" smooth={true} duration={500}>
+          <Button
+            style={{
+              padding: "10px",
+              border: "none",
+              cursor: "pointer",
+              backgroundColor: COLOR.DARK_CREAM,
+              color: "white",
+              fontWeight: "bold",
+              fontSize: "16px",
+            }}
+          >
+            Our Services
+          </Button>
+        </Link>
       </Flex>
     </Flex>
   );
