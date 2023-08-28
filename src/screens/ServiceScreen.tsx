@@ -12,10 +12,11 @@ import {
 } from "@chakra-ui/react";
 import COLOR from "../constants/COLOR";
 
-import CITY from "../assets/CITY.jpg";
 import RESIDENT from "../assets/RESIDENT.jpg";
-import STORE_FRONT from "../assets/STORE_FRONT.jpg";
-import COMMERCIAL from "../assets/COMMERCIAL.jpg";
+import STORE_FRONT from "../assets/STORE_FRONT.jpeg";
+import COMMERCIAL from "../assets/COMMERCIAL.jpeg";
+import PRESSURE_CLEANING from "../assets/PRESSURE_CLEANING.jpeg";
+import BALUSTRADE from "../assets/BALUSTRADE.jpeg";
 
 const SERVICES_LIST = [
   {
@@ -42,9 +43,16 @@ const SERVICES_LIST = [
   {
     id: 3,
     name: "PRESSURE CLEANING",
-    image: CITY,
+    image: PRESSURE_CLEANING,
     description:
       "We take care of cleanliness and hygiene, so you doesn't have worry about cleaning!",
+  },
+  {
+    id: 4,
+    name: "GLASS BALUSTRADE",
+    image: BALUSTRADE,
+    description:
+      "Glass pool fencing and balustrade creates a feeling of openness and allows unobstruced views.Overtime, dirt and grime can build up, Freshen it up with a wash and you'll have sparking clear glass for your next event.",
   },
 ];
 
